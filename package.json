@@ -1,0 +1,19 @@
+{
+  "name": "responsive-platformspecific-app",
+  "version": "1.0.0",
+  "description": "Lalalalalal",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alessandrocapra/responsive-platformspecific-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alessandrocapra/responsive-platformspecific-app/issues"
+  },
+  "homepage": "https://github.com/alessandrocapra/responsive-platformspecific-app#readme"
+}
