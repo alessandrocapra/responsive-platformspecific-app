@@ -1,8 +1,14 @@
 {
   "name": "responsive-platformspecific-app",
   "version": "1.0.0",
-  "description": "Lalalalalal",
-  "main": "index.html",
+  "description": "How to use MDB: https://www.npmjs.com/package/bootstrap-material-design",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap-material-design": "^0.5.10",
+    "font-awesome": "^4.7.0",
+    "local-web-server": "^1.2.6"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/alessandrocapra/responsive-platformspecific-app.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
