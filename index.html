@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="node_modules/bootstrap-material-design/dist/css/bootstrap-material-design.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-material-design/dist/css/ripples.min.css">
 
+    <link href="http://cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.css" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -44,7 +46,64 @@
             </div>
         </nav>
     </header>
-    <main></main>
+    <main>
+        <div class="container">
+            <h2>Table</h2>
+            <p>The .table-responsive class creates a responsive table which will scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, there is no difference:</p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Age</th>
+                        <th>City</th>
+                        <th>Country</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Anna</td>
+                        <td>Pitt</td>
+                        <td>35</td>
+                        <td>New York</td>
+                        <td>USA</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Petri</td>
+                        <td>Suoomina</td>
+                        <td>27</td>
+                        <td>Helsinki</td>
+                        <td>Finland</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2 class="header">Dropdown</h2>
+
+            <div class="sample">
+                <div class="form-group">
+                    <label for="s1">Your favorite pastry</label>
+                    <select id="s1" class="form-control">
+                        <option value="Apple fritter">Apple fritter</option>
+                        <option value="Croissant">Croissant</option>
+                        <option value="Donut">Donut</option>
+                        <option value="Financier">Financier</option>
+                        <option value="Jello">Jello</option>
+                        <option value="Madeleine">Madeleine</option>
+                        <option value="Pound cake">Pound cake</option>
+                        <option value="Pretzel">Pretzel</option>
+                        <option value="Sfogliatelle">Sfogliatelle</option>
+                    </select>
+                </div>
+                <br>
+            </div>
+            <br>
+        </div>
+    </main>
     <footer></footer>
 
     <!-- scripts -->
