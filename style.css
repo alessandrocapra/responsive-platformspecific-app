@@ -1,0 +1,8 @@
+/*Overriding calendar*/
+#calendar {
+    /*margin-top:1.5em;*/
+}
+
+.fc-toolbar h2 {
+    font-size:2em;
+}
