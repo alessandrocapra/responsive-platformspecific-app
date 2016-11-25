@@ -1,6 +1,10 @@
 /*Overriding calendar*/
 #calendar {
-    /*margin-top:1.5em;*/
+    margin-top:2.2em;
+}
+
+@media screen {
+
 }
 
 .fc-toolbar h2 {
