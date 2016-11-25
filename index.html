@@ -19,6 +19,8 @@
     <!-- Calendar view -->
     <link rel='stylesheet' href='node_modules/fullcalendar/dist/fullcalendar.css' />
 
+    <!--My css-->
+    <link rel="stylesheet" href="style.css">
     <!--<link href="http://cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.css" rel="stylesheet">-->
 
 </head>
@@ -65,7 +67,6 @@
             <div class="row">
                 <div class="calendar col-xs-12 col-sm-6">
                     <h1>Calendar view</h1>
-                    <p>Put calendar here</p>
                     <div id="calendar"></div>
                 </div>
                 <div class="col-xs-12 col-sm-6">
@@ -90,8 +91,10 @@
             // page is now ready, initialize the calendar...
             $('#calendar').fullCalendar({
                 // put your options and callbacks here
-                dayClick: function() {
-                    alert('a day has been clicked!');
+                header: {
+                    left:   'title',
+                    center: 'today',
+                    right:  'month,basicWeek,basicDay prev,next'
                 }
             })
     });</script>
