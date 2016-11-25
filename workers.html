@@ -39,17 +39,18 @@
                 <div class="navbar-collapse collapse navbar-material-light-blue-collapse">
                     <ul class="nav navbar-nav">
                         <!--<li class="active"><a href="javascript:void(0)">Active</a></li>-->
+                        <li><a href="javascript:void(0)">Tasks</a></li>
                         <li class="dropdown">
-                            <a href="index.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Tasks
+                            <a href="index.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Workers
                                 <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="javascript:void(0)">All</a></li>
-                                <li><a href="javascript:void(0)">Assigned</a></li>
-                                <li><a href="javascript:void(0)">Unassigned</a></li>
-                                <li><a href="javascript:void(0)">Completed</a></li>
+                                <li><a href="javascript:void(0)">Busy</a></li>
+                                <li><a href="javascript:void(0)">Free</a></li>
+                        
                             </ul>
                         </li>
-                        <li><a href="workers.html">Workers</a></li>
+                        
                         <li><a href="javascript:void(0)">Help</a></li>
                     </ul>
                     <form class="navbar-form navbar-left">
@@ -68,67 +69,83 @@
     <main>
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-sm-push-6 task-list">
-                    <h1>Tasks</h1>
-                    <div class="form-group">
-                        <input type="text" placeholder="Search.." />
-                    </div>
-                    <article class="row">
-                        <div class="col-xs-12">
-                            <h2>Task #1</h2>
-                            <h3>Due date: 15/12/2016</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eligendi maxime optio quibusdam. Blanditiis cum cupiditate deserunt doloremque ea, explicabo id, ipsam minus nostrum possimus quae quibusdam temporibus velit? Incidunt?</p>
-                            <h3>Assigned workers</h3>
-                            <div class="workers-list">
-                                <a href="#0" class="label label-info">Petri Suootima</a>
-                                <a href="#0" class="label label-info">Marko Tuulo</a>
-                            </div>
-                            <div class="form-group buttons-complete-add">
-                                <button class="btn btn-default" type="submit">Mark as complete</button>
-                                <button class="btn btn-default" type="submit">Add worker</button>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="row">
-                        <div class="col-xs-12 col-sm-8">
-                            <h2>Task #2</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eligendi maxime optio quibusdam. Blanditiis cum cupiditate deserunt doloremque ea, explicabo id, ipsam minus nostrum possimus quae quibusdam temporibus velit? Incidunt?</p>
-                            <h3>Assigned workers</h3>
-                            <div class="workers-list">
-                                <a href="#0" class="label label-info">Petri Suootima</a>
-                                <a href="#0" class="label label-info">Marko Tuulo</a>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-4">
-                            <h3>Due date: 15/12/2016</h3>
-                            <div class="form-group">
-                                <button class="btn btn-default" type="submit">Mark as complete</button>
-                                <button class="btn btn-default" type="submit">Add worker</button>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="row">
-                        <div class="col-xs-12 col-sm-8">
-                            <h2>Task #3</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eligendi maxime optio quibusdam. Blanditiis cum cupiditate deserunt doloremque ea, explicabo id, ipsam minus nostrum possimus quae quibusdam temporibus velit? Incidunt?</p>
-                            <h3>Assigned workers</h3>
-                            <div class="workers-list">
-                                <a href="#0" class="label label-info">Petri Suootima</a>
-                                <a href="#0" class="label label-info">Marko Tuulo</a>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-4">
-                            <h3>Due date: 15/12/2016</h3>
-                            <div class="form-group">
-                                <button class="btn btn-default" type="submit">Mark as complete</button>
-                                <button class="btn btn-default" type="submit">Add worker</button>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="calendar col-xs-12 col-sm-6 col-sm-pull-6">
+                <div class="calendar col-xs-12 col-sm-6">
                     <h1>Calendar view</h1>
                     <div id="calendar"></div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <h1>Workers</h1>
+                    <article class="row">
+                        <div class="col-xs-12 col-sm-8">
+                            <h2>Stanley Stoner</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eligendi maxime optio quibusdam. Blanditiis cum cupiditate deserunt doloremque ea, explicabo id, ipsam minus nostrum possimus quae quibusdam temporibus velit? Incidunt?</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                           <h2>Remove task </h2>
+                            <div class="form-group">
+
+                                <div class="radio">
+                                    <label>
+                                    <input type="radio" name="sample1" value="option1" checked="">
+                            
+                                    </label>
+                                </div>
+                             <div class="radio">
+                                    <label>
+                                    <input type="radio" name="sample1" value="option1">
+                                    
+                                    </label>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </article>
+                    <article class="row">
+                        <div class="col-xs-12 col-sm-8">
+                            <h2>Sindre Suotima</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eligendi maxime optio quibusdam. Blanditiis cum cupiditate deserunt doloremque ea, explicabo id, ipsam minus nostrum possimus quae quibusdam temporibus velit? Incidunt?</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                           <h2>Remove task </h2>
+                            <div class="form-group">
+
+                                <div class="radio">
+                                    <label>
+                                    <input type="radio" name="sample1" value="option1" checked="">
+                            
+                                    </label>
+                                </div>
+                             <div class="radio">
+                                    <label>
+                                    <input type="radio" name="sample1" value="option1">
+                                    
+                                    </label>
+                                </div>
+                            </div>
+                    </article>
+                    <article class="row">
+                        <div class="col-xs-12 col-sm-8">
+                            <h2>Mika Tuulo</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eligendi maxime optio quibusdam. Blanditiis cum cupiditate deserunt doloremque ea, explicabo id, ipsam minus nostrum possimus quae quibusdam temporibus velit? Incidunt?</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                           <h2>Remove task </h2>
+                            <div class="form-group">
+
+                                <div class="radio">
+                                    <label>
+                                    <input type="radio" name="sample1" value="option1" checked="">
+                            
+                                    </label>
+                                </div>
+                             <div class="radio">
+                                    <label>
+                                    <input type="radio" name="sample1" value="option1">
+                                    
+                                    </label>
+                                </div>
+                            </div>
+                    </article>
                 </div>
             </div>
         </div>
@@ -150,7 +167,7 @@
                 // put your options and callbacks here
                 header: {
                     left:   'title',
-                    center: '',
+                    center: 'today',
                     right:  'month,basicWeek,basicDay prev,next'
                 }
             })
