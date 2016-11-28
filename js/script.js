@@ -8,10 +8,14 @@ $(document).ready(function() {
             center: '',
             right:  'month,basicWeek,basicDay prev,next'
         }
-    })
+    });
+
+    // sticky calendar
+    $('.calendar').stick_in_parent();
 
     // hide calendar view
     // $('.calendar').hide();
+
 
     // display the calendar on click on mobile devices
     $('span.glyphicon-calendar, span.glyphicon-remove-sign').click(function(){
