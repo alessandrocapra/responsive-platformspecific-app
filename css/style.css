@@ -1,5 +1,6 @@
 body {
-    font-size:1.4em;
+    font-family:'Roboto', sans-serif;
+    font-size:1.6em;
 }
 
 /*Overriding calendar*/
@@ -45,7 +46,7 @@ body {
 @media screen and (max-width: 480px){
 
     .calendar {
-        /*display: none;*/
+        display: none;
     }
 
     .tasks-title span, .calendar-title span {

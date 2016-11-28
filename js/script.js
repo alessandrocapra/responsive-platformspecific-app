@@ -11,7 +11,7 @@ $(document).ready(function() {
     })
 
     // hide calendar view
-    $('.calendar').hide();
+    // $('.calendar').hide();
 
     // display the calendar on click on mobile devices
     $('span.glyphicon-calendar, span.glyphicon-remove-sign').click(function(){
