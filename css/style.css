@@ -34,4 +34,26 @@ body {
     display: block;
 }
 
-.tas
+.tasks-title h1, .calendar-title h1 {
+    display: inline-block;
+}
+
+.tasks-title span, .calendar-title span {
+    display: none;
+}
+
+@media screen and (max-width: 480px){
+
+    .calendar {
+        /*display: none;*/
+    }
+
+    .tasks-title span, .calendar-title span {
+        position: relative;
+        display: inline-block;
+        float: right;
+        top: 1em;
+        font-size:2em;
+        cursor: pointer;
+    }
+}
