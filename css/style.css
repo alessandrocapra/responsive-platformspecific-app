@@ -43,6 +43,10 @@ body {
     display: none;
 }
 
+.menu-icon {
+    font-weight: 700;
+}
+
 @media screen and (max-width: 480px){
 
     .calendar {
