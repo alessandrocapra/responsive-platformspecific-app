@@ -23,11 +23,14 @@ $(document).ready(function() {
 
 
     // display the remove option for workers
-    $('a.label.label-info').hover(function(){
-       $(this).children().show();
-    }, function () {
-        $(this).children().hide();
-    });
+    $('.workers-list').on({
+        mouseenter: function(){
+            $(this).children().show();
+        },
+        mouseleave: function () {
+            $(this).children().hide();
+        }
+    }, "a.label.label-info");
 
     // confirm dialog to remove worker from task
     $('#confirmModal').on('show.bs.modal', function(e) {
@@ -45,12 +48,31 @@ $(document).ready(function() {
         });
     });
 
+    //modal to add a worker
+    $('#addWorkerModal').on('show.bs.modal',function(e){
+        var element = $(e.relatedTarget);
+
+        $('#addWorker').click(function(){
+            var selectedOption = $('#addWorkerModal select option:selected');
+            element.parent().siblings('.workers-list').append('<a href="#0" class="label label-info"> '+ selectedOption.text() +' <span class="remove-worker" data-toggle="modal" data-target="#confirmModal">X</span></a>')
+            $('#addWorkerModal').modal('hide');
+        });
+
+    });
+
     // clicked on Mark as complete button, showing the toast!
     $('.marked-complete').click(function () {
         $('.undo').show();
         setTimeout(function() {
             $('.undo').fadeOut('fast');
         }, 5000);
+
+        var currentTask = $(this).parents('article');
+        currentTask.hide();
+        $('.undo a').click(function(){
+            currentTask.show();
+            $('.undo').fadeOut('fast');
+        });
 
     });
 

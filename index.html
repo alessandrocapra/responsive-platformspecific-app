@@ -102,7 +102,7 @@
                             </div>
                             <div class="form-group buttons-complete-add">
                                 <button class="btn btn-default marked-complete" type="submit">Mark as complete</button>
-                                <button class="btn btn-default" type="submit">Add worker</button>
+                                <button class="btn btn-default" type="submit" data-toggle="modal" data-target="#addWorkerModal">Add worker</button>
                             </div>
                         </div>
                     </article>
@@ -118,7 +118,7 @@
                             </div>
                             <div class="form-group buttons-complete-add">
                                 <button class="btn btn-default marked-complete" type="submit">Mark as complete</button>
-                                <button class="btn btn-default" type="submit">Add worker</button>
+                                <button class="btn btn-default" type="submit" data-toggle="modal" data-target="#addWorkerModal">Add worker</button>
                             </div>
                         </div>
                     </article>
@@ -134,7 +134,7 @@
                             </div>
                             <div class="form-group buttons-complete-add">
                                 <button class="btn btn-default marked-complete" type="submit">Mark as complete</button>
-                                <button class="btn btn-default" type="submit">Add worker</button>
+                                <button class="btn btn-default" type="submit" data-toggle="modal" data-target="#addWorkerModal">Add worker</button>
                             </div>
                         </div>
                     </article>
@@ -144,7 +144,7 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                    <h4 class="modal-title" id="myModalLabel">Confirm operation</h4>
                                 </div>
                                 <div class="modal-body">
                                     <p>Are you sure you want to remove <span class="worker-name">this worker</span> from the task <span class="task-name">task-name</span>?</p>
@@ -156,12 +156,36 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="modal fade" id="addWorkerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title">Add worker</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Select the worker to add to this task from the dropdown menu.</p>
+                                    <select name="workers" id="workers">
+                                        <option value="Mario">Mario</option>
+                                        <option value="Luigi">Luigi</option>
+                                        <option value="Peach">Peach</option>
+                                        <option value="Toad">Toad</option>
+                                    </select>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success" id="addWorker">Add worker</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="container undo">
             <div class="row">
-                <div class="col-xs-12">Marked as complete.<a style="float: right;" href="#0"><strong>UNDO</strong></a></div>
+                <div class="col-xs-12 text-center"><p>Marked as complete.<a href="#0"><strong>UNDO</strong></a></p></div>
             </div>
         </div>
     </main>
