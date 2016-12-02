@@ -77,72 +77,97 @@
     <main>
         <div class="container">
             <div class="row">
-                <div class="calendar col-xs-12 col-sm-6">
+                <div class="calendar col-xs-12 col-sm-5">
                     <div class="calendar-title">
                         <h1>Calendar view</h1><span class="glyphicon glyphicon-remove-sign"></span>
                     </div>
                     <div id="calendar"></div>
                 </div>
-                <div class="col-xs-12 col-sm-6 task-list">
+                <div class="col-xs-12 col-sm-5 col-sm-offset-1 task-list">
                     <div class="tasks-title">
                         <h1>Tasks</h1><span class="glyphicon glyphicon-calendar"></span>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Search.." />
+                        <input type="text" id='search-bar-tasks' placeholder="Search.." />
                     </div>
                     <article class="row">
                         <div class="col-xs-12">
-                            <h2>Task #1</h2>
+                            <h2>Transport cement to working site</h2>
                             <h3>Due date: 15/12/2016</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eligendi maxime optio quibusdam. Blanditiis cum cupiditate deserunt doloremque ea, explicabo id, ipsam minus nostrum possimus quae quibusdam temporibus velit? Incidunt?</p>
                             <h3>Assigned workers</h3>
                             <div class="workers-list">
-                                <a href="#0" class="label label-info">Petri Suootima</a>
-                                <a href="#0" class="label label-info">Marko Tuulo</a>
+                                <a href="#0" class="label label-info">Petri Suootima <span class="remove-worker" data-toggle="modal" data-target="#confirmModal">X</span></a>
+                                <a href="#0" class="label label-info">Marko Tuulo <span class="remove-worker" data-toggle="modal" data-target="#confirmModal">X</span></a>
                             </div>
                             <div class="form-group buttons-complete-add">
-                                <button class="btn btn-default" type="submit">Mark as complete</button>
+                                <button class="btn btn-default marked-complete" type="submit">Mark as complete</button>
                                 <button class="btn btn-default" type="submit">Add worker</button>
                             </div>
                         </div>
                     </article>
                     <article class="row">
                         <div class="col-xs-12">
-                            <h2>Task #2</h2>
+                            <h2>Prepare cement</h2>
                             <h3>Due date: 15/12/2016</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eligendi maxime optio quibusdam. Blanditiis cum cupiditate deserunt doloremque ea, explicabo id, ipsam minus nostrum possimus quae quibusdam temporibus velit? Incidunt?</p>
                             <h3>Assigned workers</h3>
                             <div class="workers-list">
-                                <a href="#0" class="label label-info">Petri Suootima</a>
-                                <a href="#0" class="label label-info">Marko Tuulo</a>
+                                <a href="#0" class="label label-info">Petri Suootima <span class="remove-worker" data-toggle="modal" data-target="#confirmModal">X</span></a>
+                                <a href="#0" class="label label-info">Marko Tuulo <span class="remove-worker" data-toggle="modal" data-target="#confirmModal">X</span></a>
                             </div>
                             <div class="form-group buttons-complete-add">
-                                <button class="btn btn-default" type="submit">Mark as complete</button>
+                                <button class="btn btn-default marked-complete" type="submit">Mark as complete</button>
                                 <button class="btn btn-default" type="submit">Add worker</button>
                             </div>
                         </div>
                     </article>
                     <article class="row">
                         <div class="col-xs-12">
-                            <h2>Task #3</h2>
+                            <h2>Clean ground floor</h2>
                             <h3>Due date: 15/12/2016</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eligendi maxime optio quibusdam. Blanditiis cum cupiditate deserunt doloremque ea, explicabo id, ipsam minus nostrum possimus quae quibusdam temporibus velit? Incidunt?</p>
                             <h3>Assigned workers</h3>
                             <div class="workers-list">
-                                <a href="#0" class="label label-info">Petri Suootima</a>
-                                <a href="#0" class="label label-info">Marko Tuulo</a>
+                                <a href="#0" class="label label-info">Petri Suootima <span class="remove-worker" data-toggle="modal" data-target="#confirmModal">X</span></a>
+                                <a href="#0" class="label label-info">Marko Tuulo <span class="remove-worker" data-toggle="modal" data-target="#confirmModal">X</span></a>
                             </div>
                             <div class="form-group buttons-complete-add">
-                                <button class="btn btn-default" type="submit">Mark as complete</button>
+                                <button class="btn btn-default marked-complete" type="submit">Mark as complete</button>
                                 <button class="btn btn-default" type="submit">Add worker</button>
                             </div>
                         </div>
                     </article>
+
+                    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to remove <span class="worker-name">this worker</span> from the task <span class="task-name">task-name</span>?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-danger" id="confirm-delete">Remove worker</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="container undo">
+            <div class="row">
+                <div class="col-xs-12">Marked as complete.<a style="float: right;" href="#0"><strong>UNDO</strong></a></div>
+            </div>
+        </div>
     </main>
-    <footer></footer>
+    <footer class="container-fluid text-center">
+        <h3>ForeTask. All rights reserved.</h3>
+    </footer>
 
     <!-- scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
