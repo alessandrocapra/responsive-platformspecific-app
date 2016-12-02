@@ -11,7 +11,9 @@ $(document).ready(function() {
     });
 
     // sticky calendar
-    $('.calendar').stick_in_parent();
+    if(window.matchMedia("screen and (min-width: 468px)").matches){
+        $('.calendar').stick_in_parent();
+    }
 
     // hide calendar view
     // $('.calendar').hide();
@@ -30,7 +32,7 @@ $(document).ready(function() {
         mouseleave: function () {
             $(this).children().hide();
         }
-    }, "a.label.label-info");
+    }, "a.btn.btn-default");
 
     // confirm dialog to remove worker from task
     $('#confirmModal').on('show.bs.modal', function(e) {
@@ -54,7 +56,7 @@ $(document).ready(function() {
 
         $('#addWorker').click(function(){
             var selectedOption = $('#addWorkerModal select option:selected');
-            element.parent().siblings('.workers-list').append('<a href="#0" class="label label-info"> '+ selectedOption.text() +' <span class="remove-worker" data-toggle="modal" data-target="#confirmModal">X</span></a>')
+            element.parent().siblings('.workers-list').append('<a href="#0" class="btn btn-default"> '+ selectedOption.text() +' <span class="remove-worker" data-toggle="modal" data-target="#confirmModal">X</span></a>')
             $('#addWorkerModal').modal('hide');
         });
 

@@ -66,16 +66,20 @@ select option {
 .remove-worker {
     background: red;
     display: none;
-    padding:0.5em;
+    padding:0.7em;
     margin-left:0.5em;
 
+    color: #fff;
     font-size: 1em;
     font-weight:600;
 }
 
 .buttons-complete-add {
     text-align: center;
-    display: block;
+}
+
+.buttons-complete-add button {
+    font-size: 1.2em;
 }
 
 .tasks-title h1, .calendar-title h1 {
@@ -123,17 +127,21 @@ footer {
 
 
 /* Overriding bootstrap */
-.btn-danger, .btn-success {
+.btn-danger, .btn-success, .btn-info {
     color: #fff !important;
 }
 
-.btn-danger:hover, .btn-success:hover {
+.btn-danger:hover, .btn-success:hover, .btn-info:hover {
     color: #262626 !important;
 }
 
 
 
 @media screen and (max-width: 480px){
+
+    body {
+        font-size:1.8em;
+    }
 
     .calendar {
         display: none;
