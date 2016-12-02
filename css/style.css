@@ -123,12 +123,12 @@ footer {
 
 
 /* Overriding bootstrap */
-.btn-danger {
-    color: #fff;
+.btn-danger, .btn-success {
+    color: #fff !important;
 }
 
-.btn-danger:hover {
-    color: #f44336;
+.btn-danger:hover, .btn-success:hover {
+    color: #262626 !important;
 }
 
 
