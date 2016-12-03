@@ -31,6 +31,11 @@ select {
     padding:0.5em;
 }
 
+input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+}
+
 select option {
     padding: 0.5em;
 }
@@ -50,7 +55,7 @@ select option {
     width:100%;
 }
 
-.task-list article {
+article {
     border-bottom:1px solid #ccc;
 }
 .workers-list a {
@@ -61,6 +66,10 @@ select option {
 
     margin-top:0.5em;
     margin-right:0.5em;
+}
+
+.worker-id {
+    text-align: center;
 }
 
 .remove-worker {
