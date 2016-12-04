@@ -221,4 +221,8 @@ footer {
         font-size:2em;
         cursor: pointer;
     }
+
+    .worker-tasks div{
+        width:100%;
+    }
 }
