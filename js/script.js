@@ -89,7 +89,7 @@ $(document).ready(function() {
     // filter the task list
     $('.task-list article').each(function(){
         $(this).attr('data-search-term', $(this).text().toLowerCase());
-    })
+    });
 
     $('#search-bar-tasks').on('keyup', function () {
         var searchTerm = $(this).val().toLowerCase();
@@ -101,14 +101,13 @@ $(document).ready(function() {
                 $(this).hide();
             }
         })
-    })
+    });
 
     /*
     *
     * END TASKS PAGE
     *
     * */
-
 
 
 
@@ -126,8 +125,9 @@ $(document).ready(function() {
         return parseInt(elem, 10) - 1;
     }
 
+    // move elements between assigned and available sections
     $('.worker-tasks div').click( function () {
-        var $numberOfWorkers = $(this).children('span');
+        var $numberOfWorkers = $(this).children('span:nth-child(3)');
 
         if($(this).parents('.available').length){
             // it is in available div, move to assigned
@@ -138,6 +138,23 @@ $(document).ready(function() {
             $(this).appendTo($(this).parent().siblings('.available'));
             $numberOfWorkers.text(removeOne($numberOfWorkers.text()));
         }
+    });
+
+    // filter the workers list
+    $('.workers-list article').each(function(){
+        $(this).attr('data-search-term', $(this).text().toLowerCase());
+    });
+
+    $('#searchbar-workers').on('keyup', function () {
+        var searchTerm = $(this).val().toLowerCase();
+
+        $('.workers-list article').each(function () {
+            if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm.length < 1) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        })
     });
 
     /*

@@ -58,6 +58,9 @@ select option {
 /* Task page */
 input[type=text] {
     width:100%;
+    padding: 0.75em;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 3px;
 }
 
 article {
@@ -177,7 +180,9 @@ article p {
 
 footer {
     padding:1em;
+    margin-top:2em;
     background: #03a9f4;
+
 }
 
 
