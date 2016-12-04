@@ -24,6 +24,13 @@ $(document).ready(function() {
     });
 
 
+    /*
+    *
+    * TASKS PAGE
+    *
+    * */
+
+
     // display the remove option for workers
     $('.workers-list').on({
         mouseenter: function(){
@@ -95,6 +102,49 @@ $(document).ready(function() {
             }
         })
     })
+
+    /*
+    *
+    * END TASKS PAGE
+    *
+    * */
+
+
+
+
+    /*
+    *
+    * WORKERS PAGE
+    *
+    * */
+
+    function addOne(elem){
+        return parseInt(elem, 10) + 1;
+    }
+
+    function removeOne(elem){
+        return parseInt(elem, 10) - 1;
+    }
+
+    $('.worker-tasks div').click( function () {
+        var $numberOfWorkers = $(this).children('span');
+
+        if($(this).parents('.available').length){
+            // it is in available div, move to assigned
+            $(this).appendTo($(this).parent().siblings('.assigned'));
+            $numberOfWorkers.text(addOne($numberOfWorkers.text()));
+        } else {
+            // it is in assigned, move to available
+            $(this).appendTo($(this).parent().siblings('.available'));
+            $numberOfWorkers.text(removeOne($numberOfWorkers.text()));
+        }
+    });
+
+    /*
+     *
+     * END WORKERS PAGE
+     *
+     * */
 
 });
 
