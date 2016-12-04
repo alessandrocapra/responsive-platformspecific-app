@@ -56,7 +56,7 @@ select option {
 }
 
 /* Task page */
-.task-list input[type=text] {
+input[type=text] {
     width:100%;
 }
 
@@ -79,6 +79,11 @@ article {
     /*align-items: center;*/
 
     padding:2em 1em;
+    background: rgba(0,0,0,0.1);
+}
+
+.worker:nth-child(even) {
+    background: #fff;
 }
 
 .worker-info {
@@ -109,8 +114,9 @@ article {
     border-radius: 3px;
 }
 
-.worker-tasks div span {
-    font-weight:500;
+.worker-tasks div span:nth-child(3) {
+    font-weight:700;
+    padding-left:0.3em;
 }
 
 .remove-worker {
