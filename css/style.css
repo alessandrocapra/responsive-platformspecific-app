@@ -63,9 +63,15 @@ input[type=text] {
     border-radius: 3px;
 }
 
-article {
+.task-list article {
     border-bottom:1px solid #ccc;
+    background: rgba(0,0,0,0.1);
 }
+
+.task-list article:nth-child(even){
+    background: #fff;
+}
+
 .workers-list a {
     display: inline-block;
     padding: 0.5em;
